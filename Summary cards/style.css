@@ -1,14 +1,11 @@
 body {
   margin-top: 40px;
-  box-sizing: border-box;
 }
-
 
 .cards {
   display: grid;
   place-items: center;
   padding: 20px;
-  
 }
 
 .cards__header {
@@ -16,7 +13,7 @@ body {
 }  
 
 .header__title {
-  font-family: "Rubik", sans-serif;
+  font-family: 'Rubik', sans-serif;
   font-size: 7.5rem;
   font-weight: 900;
   text-transform: uppercase;
@@ -33,6 +30,8 @@ body {
   max-width: 1024px;
 }
 
+
+
 @media (max-width: 699px) {
   .header__title {
     font-size: 5.5rem;
@@ -44,7 +43,7 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .cards__list > .cards__item {
+  .cards-item {
     height: 350px;
   }
 }
@@ -54,3 +53,88 @@ body {
     grid-template-columns: repeat(4, 1fr);
   }
 }
+
+.cards-item {
+  background-size: cover;
+  background-color: #3a8491;
+  border-radius: 4px;
+}
+
+.cards-item--meeru-island {
+  background-image: url('img/1.jpg');
+}
+
+.cards-item--flamingo-beech {
+  background-image: url('img/2.jpg');
+}
+
+.cards-item--protur-safari {
+  background-image: url('img/3.jpg');
+}
+
+.cards-item--mountain-view {
+  background-image: url('img/4.jpg');
+}
+
+
+.cards-item__content {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, .75);
+  color: whitesmoke;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  height: calc(100% - 4rem); 
+  display: grid;
+  grid-template-rows: min-content auto min-content;
+  align-items: center;
+}
+
+.cards-item__title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0;
+}
+
+.cards-item__description {
+  font-family: 'Cardo', serif;
+  font-style: italic;
+  font-size: 1.125rem;
+  line-height: 1.35;
+}
+
+.cards-item__cta {
+  display: inline-block;
+  background-color: #ffa600;
+  color: rgba(0, 0, 0, .75);
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+}
+
+.cards-item__cta:hover {
+  background-color: #e69500;
+}
+
+.cards-item__cta:focus {
+  outline: 1px dashed #e69500;
+  outline-offset: 3px;
+}
+
+@media (hover:hover) and (min-width: 700px) {
+  .cards-item__content {
+    transform: translateY(calc(350px - 8rem));
+    height: 5rem;
+    overflow: hidden;
+  }
+
+ 
+  .cards-item__content > *:not(.cards-item__title) {
+    opacity: 0;
+    transform: translateY(1rem);
+    
+  }
+}
+
