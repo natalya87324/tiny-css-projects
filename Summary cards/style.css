@@ -1,5 +1,6 @@
 body {
   margin-top: 40px;
+  background-color: #010101;
 }
 
 .cards {
@@ -123,18 +124,31 @@ body {
   outline-offset: 3px;
 }
 
-@media (hover:hover) and (min-width: 700px) {
+@media (hover:hover) and (min-width: 700px) and (prefers-reduced-motion: no-preference) {
   .cards-item__content {
     transform: translateY(calc(350px - 8rem));
     height: 5rem;
     overflow: hidden;
+    transition: all 700ms ease-in-out;
   }
 
  
   .cards-item__content > *:not(.cards-item__title) {
     opacity: 0;
     transform: translateY(1rem);
-    
+    transition: all 700ms ease-in-out;
   }
-}
 
+  .cards-item:hover .cards-item__content,
+  .cards-item:focus-within .cards-item__content {
+    transform: translateY(0);
+    height: calc(350px - 4rem);
+  }
+
+  .cards-item:hover .cards-item__content > *:not(.cards-item__title),
+  .cards-item:focus-within .cards-item__content > *:not(.cards-item__title) {
+    opacity: 1;
+    transform: translateY(0);
+  } 
+
+}
