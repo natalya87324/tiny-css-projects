@@ -26,6 +26,7 @@ body {
 }
 
 .card {
+  padding: 0 24px 24px;
   background-color: var(--card-background);
   box-shadow: 0 0 55px rgba(38, 40, 45, .75);
   width: 75vw;
@@ -33,6 +34,15 @@ body {
   border-radius: 4px;
   text-align: center;
   margin: calc(var(--imageSize) / 3 + 24px) 24px;
+  background-image: radial-gradient(
+    circle at top,
+    var(--primary) 50%,
+    transparent 50%,
+    transparent
+  );
+  background-size: 1500px 500px;
+  background-position: center -300px;
+  background-repeat: no-repeat;
 }
 
 .portrait {
@@ -41,4 +51,16 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-top: calc(-1 * var(--imageSize) / 3);
+}
+
+.name {
+  font-size: 2rem;
+  margin: 36px 0 0;
+  color: var(--primary);
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--secondary);
 }
