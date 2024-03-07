@@ -64,3 +64,79 @@ body {
   font-weight: bold;
   color: var(--secondary);
 }
+
+dl {
+  display: flex;
+  justify-content: space-around;
+  gap: 12px;
+}
+
+dl > div {
+  display: flex;
+  flex-basis: 33%;
+  flex-shrink: 1;
+  flex-direction: column-reverse;
+}
+
+dd {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--primary);
+}
+
+dt {
+  font-size: .75rem;
+}
+
+.summary {
+  margin: 24px 0;
+  line-height: 1.5;
+}
+
+.technologies {
+  list-style: none;
+  margin: 24px 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.technologies li{
+  padding: 12px 24px;
+  border-radius: 24px;
+  background-color: var(--technologies-background);
+}
+
+.action-btn, .action-link {
+  font-size: 1rem;
+  padding: 12px 24px;
+  text-decoration: none;
+  border: 1px solid var(--primary);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.follow {
+  background-color: var(--primary);
+  color: var(--primary-contrast);
+}
+
+.message {
+  background-color: var(--primary-contrast);
+  color: var(--primary);
+}
+
+*:focus-visible {
+  outline: 1px dotted var(--primary);
+  outline-offset: 3px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 36px;
+}
